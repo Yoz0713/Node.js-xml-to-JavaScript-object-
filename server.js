@@ -7,11 +7,7 @@ const getRawBody = require("raw-body");
 const app = express();
 
 // 啟用 CORS
-app.use(cors({
-    origin: ["https://hearing-report-input-noah-xml.vercel.app/"], // 換成你的前端網址
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type"],
-  }));
+app.use(cors());
   
 app.options('*', cors()); // 處理 preflight 請求
 
