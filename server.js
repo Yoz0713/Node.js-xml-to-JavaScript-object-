@@ -8,8 +8,6 @@ const app = express();
 
 // 啟用 CORS
 app.use(cors());
-  
-app.options('*', cors()); // 處理 preflight 請求
 
 // 使用 express.json 中介軟體來解析 JSON 請求
 app.use(express.json({ limit: '10mb' }));
